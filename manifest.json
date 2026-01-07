@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "MD - Curriculum AutoPrint",
+    "description": "Uma extensão simples para o Google Chrome, que Abre aba de impressão automaticamente ao visualizar endereço web do curriculum - https://messiasdias.github.io/curriculum/.",
+    "version": "1.0",
+    "permissions": [],
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/img/icon.png",
+        "default_title": "Curriculum AutoPrint"
+    },
+    "icons": {
+        "16": "assets/img/icon.png",
+        "32": "assets/img/icon.png",
+        "48": "assets/img/icon.png",
+        "128": "assets/img/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://messiasdias.github.io/curriculum/"
+            ],
+            "js": [
+                "assets/js/content.js"
+            ]
+        }
+    ]
+}
